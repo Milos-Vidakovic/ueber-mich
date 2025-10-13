@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ausbildung von Milos Vidakovic, Business Information Technology Student an der BFH"
+    />
+    <title>Ausbildung - Milos Vidakovic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <style>
+      /* Zusätzliche Styles für die neue Gruppierung */
+      .study-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .study-type,
+      .grade-info,
+      .specialization {
+        display: inline-block;
+        background: var(--light-color);
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--border-radius);
+        font-size: 0.9rem;
+        color: var(--text-color);
+      }
+
+      .curriculum-grouped {
+        margin-top: var(--spacing-md);
+      }
+
+      .curriculum-group {
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .curriculum-group h5 {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: var(--spacing-sm);
+        font-weight: 600;
+      }
+
+      .subjects-grid-grouped {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .subject-grouped {
+        background: var(--light-color);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+        font-size: 0.9rem;
+        text-align: left;
+        border-left: 3px solid var(--primary-color);
+        transition: var(--transition);
+      }
+
+      .subject-grouped:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateX(5px);
+      }
+
+      /* Dark Mode Support für neue Elemente */
+      [data-theme="dark"] .study-type,
+      [data-theme="dark"] .grade-info,
+      [data-theme="dark"] .specialization {
+        background: var(--bg-secondary);
+        color: var(--text-color);
+      }
+
+      [data-theme="dark"] .curriculum-group h5 {
+        color: var(--text-color);
+      }
+
+      [data-theme="dark"] .subject-grouped {
+        background: var(--bg-secondary);
+        color: var(--text-color);
+      }
+
+      [data-theme="dark"] .subject-grouped:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      /* Responsive für Tablets */
+      @media screen and (max-width: 768px) {
+        .subjects-grid-grouped {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="../index.html">MV</a>
+          </div>
+          <div class="nav-controls">
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle" id="themeToggle">
+              <span class="theme-icon">🌙</span>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="navToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="../index.html">Über mich</a></li>
+            <li><a href="ausbildung.html" class="active">Ausbildung</a></li>
+            <li><a href="arbeitserfahrung.html">Arbeitserfahrung</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Ausbildung</h1>
+        </div>
+      </section>
+
+      <section class="education">
+        <div class="container">
+          <h2>Akademischer Hintergrund</h2>
+
+          <!-- Timeline Container -->
+          <div class="timeline">
+            <!-- BFH - Aktuelles Studium -->
+            <div class="timeline-item current">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Bachelor of Science</h3>
+                  <span class="timeline-date">08.2023 - 07.2026</span>
+                </div>
+                <h4>Wirtschaftsinformatik</h4>
+                <p class="institution">Berner Fachhochschule BFH</p>
+
+                <div class="study-info">
+                  <span class="study-type">Vollzeitstudium</span>
+                  <span class="grade-info">Notenschnitt: 5.11</span>
+                  <span class="specialization"
+                    >Vertiefung: Applied Artificial Intelligence</span
+                  >
+                </div>
+
+                <div class="curriculum-grouped">
+                  <h5>Hauptfächer & Kompetenzen:</h5>
+
+                  <div class="curriculum-group">
+                    <h5>Wirtschaft & Management</h5>
+                    <div class="subjects-grid-grouped">
+                      <span class="subject-grouped"
+                        >• Grundlagen BWL / VWL</span
+                      >
+                      <span class="subject-grouped">• Projektmanagement</span>
+                      <span class="subject-grouped"
+                        >• Prozessmanagement (BPMN)</span
+                      >
+                      <span class="subject-grouped"
+                        >• Agile Arbeitsmethoden</span
+                      >
+                      <span class="subject-grouped"
+                        >• Sustainable Business & IT</span
+                      >
+                      <span class="subject-grouped"
+                        >• Öffentliche Innovation & Transformation</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="curriculum-group">
+                    <h5>IT & Systemverständnis</h5>
+                    <div class="subjects-grid-grouped">
+                      <span class="subject-grouped">• IT-Grundlagen</span>
+                      <span class="subject-grouped">• Softwarearchitektur</span>
+                      <span class="subject-grouped"
+                        >• IT Service Management (ITIL)</span
+                      >
+                      <span class="subject-grouped">• Governance of IT</span>
+                    </div>
+                  </div>
+
+                  <div class="curriculum-group">
+                    <h5>Daten & Entwicklung</h5>
+                    <div class="subjects-grid-grouped">
+                      <span class="subject-grouped"
+                        >• Python-Programmierung</span
+                      >
+                      <span class="subject-grouped"
+                        >• Datenbankmanagement (SQL)</span
+                      >
+                      <span class="subject-grouped"
+                        >• Grundlagen Cybersecurity</span
+                      >
+                      <span class="subject-grouped"
+                        >• Requirements Engineering (IREB)</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="curriculum-group">
+                    <h5>Künstliche Intelligenz</h5>
+                    <div class="subjects-grid-grouped">
+                      <span class="subject-grouped"
+                        >• Konzepte & mathematische Grundlagen der KI</span
+                      >
+                      <span class="subject-grouped"
+                        >• Grundlagen Algorithmen</span
+                      >
+                      <span class="subject-grouped"
+                        >• Grundlagen RAG-Chatbots</span
+                      >
+                      <span class="subject-grouped">• Prompt Engineering</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BFO - Berufslehre -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Kaufmännische Berufslehre</h3>
+                  <span class="timeline-date">08.2020 - 07.2023</span>
+                </div>
+                <h4>Mit lehrbegleitender Berufsmaturität</h4>
+                <p class="institution">Berufsfachschule Oberwallis BFO</p>
+
+                <div class="achievements">
+                  <div class="achievement">
+                    <h5>Eidgenössisches Fähigkeitszeugnis</h5>
+                    <p>Kaufmann öffentlicher Verkehr</p>
+                  </div>
+                  <div class="achievement">
+                    <h5>Berufsmaturität</h5>
+                    <p>Wirtschaft</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Orientierungsschule -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Orientierungsschule</h3>
+                  <span class="timeline-date">08.2017 - 07.2020</span>
+                </div>
+                <p class="institution">Orientierungschule Visp</p>
+                <p class="description">
+                  Grundausbildung als Vorbereitung auf die Berufsausbildung
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Milos Vidakovic</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
